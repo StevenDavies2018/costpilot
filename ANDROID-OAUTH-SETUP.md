@@ -1,6 +1,6 @@
 # ExpenseForge Android OAuth Setup (Expo)
 
-Configure Google, Facebook, and LinkedIn OAuth credentials for the Android app (built with Expo).
+Configure Google and LinkedIn OAuth credentials for the Android app (built with Expo).
 
 ## Important: Android vs Web OAuth
 
@@ -145,40 +145,6 @@ In `app.json`:
 Get your **Client Token** from Facebook app **Settings** → **Basic**.
 
 ---
-
-## 3. LinkedIn OAuth - Android
-
-### Step 1: Go to LinkedIn Developers
-
-1. https://www.linkedin.com/developers → **My apps**
-2. Select your **ExpenseForge** app
-3. Go to the **Auth** tab
-
-### Step 2: Add Android App
-
-1. Scroll to **Authorized mobile apps**
-2. Click **Add mobile app**
-3. Choose **Android**
-4. Fill in:
-   - **Application name**: ExpenseForge
-   - **Package ID**: `com.ExpenseForge.app`
-5. Click **Add app**
-
-### Step 3: Update Expo Config
-
-In `app.json`:
-
-```json
-{
-  "expo": {
-    "plugins": [
-      ["react-native-linkedin-sdk", {
-        "clientID": "YOUR_LINKEDIN_CLIENT_ID"
-      }]
-    ]
-  }
-}
-```
 
 ---
 
@@ -360,4 +326,5 @@ Once you build with EAS, update your OAuth credentials with the **production sig
 - **Google Sign-In**: https://docs.expo.dev/build-reference/google-sign-in/
 - **Facebook SDK**: https://docs.expo.dev/build-reference/facebook-sdk/
 - **EAS Build**: https://docs.expo.dev/build/introduction/
+
 

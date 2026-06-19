@@ -36,6 +36,13 @@
             "imageWidth": 76
           }
         }
+      ],
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosClientId": "775823476864-0000000000000000000000000000.apps.googleusercontent.com",
+          "androidClientId": "775823476864-is2mmg6rrum13dcqpeju73bi5p21pidm.apps.googleusercontent.com"
+        }
       ]
     ],
     "experiments": {
