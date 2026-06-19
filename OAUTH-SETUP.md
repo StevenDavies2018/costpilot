@@ -1,6 +1,9 @@
-# CostPilot OAuth Setup Guide
+# CostPilot OAuth Setup Guide - Web Backend
 
-Configure Google, Facebook, and LinkedIn OAuth for user authentication.
+Configure Google, Facebook, and LinkedIn OAuth for the **web backend** (Next.js on Vercel).
+
+> **For Android app OAuth setup**, see [`ANDROID-OAUTH-SETUP.md`](./ANDROID-OAUTH-SETUP.md)  
+> **For iOS app OAuth setup**, see [`IOS-OAUTH-SETUP.md`](./IOS-OAUTH-SETUP.md) (coming soon)
 
 ## Overview
 
