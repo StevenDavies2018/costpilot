@@ -1,11 +1,11 @@
-# CostPilot
+# ExpenseForge
 
 Niche-specific receipt scanner and expense tracker for the Canadian market.
 
 ## Project Structure
 
 ```
-costpilot/
+expenseforge/
 ├── apps/
 │   ├── ios/          # React Native (Expo) iOS app
 │   └── web/          # Next.js backend & web interface
@@ -51,8 +51,8 @@ pnpm build:web
 
 ## Architecture
 
-- **iOS App:** Expo/React Native (D:\CostPilot\apps\ios)
-- **Backend:** Next.js on Vercel (D:\CostPilot\apps\web)
+- **iOS App:** Expo/React Native (D:\ExpenseForge\apps\ios)
+- **Backend:** Next.js on Vercel (D:\ExpenseForge\apps\web)
 - **Database:** Neon PostgreSQL (shared)
 - **Authentication:** OAuth (Google, Facebook, LinkedIn)
 
@@ -65,3 +65,4 @@ Both apps share the same database and authentication system.
 - Other professionals
 
 Each user gets a custom experience tailored to their profession.
+

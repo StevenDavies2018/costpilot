@@ -1,11 +1,11 @@
-# CostPilot Setup Guide
+# ExpenseForge Setup Guide
 
 ## Project Overview
 
-CostPilot is a niche-specific receipt scanner and expense tracker for the Canadian market. It consists of:
+ExpenseForge is a niche-specific receipt scanner and expense tracker for the Canadian market. It consists of:
 
-- **iOS App** (D:\CostPilot\apps\ios) — React Native + Expo
-- **Web Backend** (D:\CostPilot\apps\web) — Next.js on Vercel
+- **iOS App** (D:\ExpenseForge\apps\ios) — React Native + Expo
+- **Web Backend** (D:\ExpenseForge\apps\web) — Next.js on Vercel
 - **Shared Database** — Neon PostgreSQL
 - **Shared Types** — TypeScript interfaces in packages/shared
 
@@ -13,7 +13,7 @@ CostPilot is a niche-specific receipt scanner and expense tracker for the Canadi
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│  CostPilot (Monorepo)                               │
+│  ExpenseForge (Monorepo)                               │
 ├─────────────────────────────────────────────────────┤
 │                                                     │
 │  ┌──────────────┐          ┌──────────────┐        │
@@ -218,4 +218,5 @@ For issues:
 
 ---
 
-**Repository:** https://github.com/StevenDavies2018/costpilot.git
+**Repository:** https://github.com/StevenDavies2018/ExpenseForge.git
+

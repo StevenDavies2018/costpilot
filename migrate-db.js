@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Quick database migration script for CostPilot
+ * Quick database migration script for ExpenseForge
  * Executes the SQL schema against Neon PostgreSQL
  */
 
@@ -20,7 +20,7 @@ if (!DATABASE_URL) {
   process.exit(1);
 }
 
-console.log('🚀 CostPilot Database Migration');
+console.log('🚀 ExpenseForge Database Migration');
 console.log('================================\n');
 
 const client = new Client({
@@ -77,3 +77,4 @@ async function migrate() {
 }
 
 migrate();
+

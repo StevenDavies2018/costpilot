@@ -1,7 +1,7 @@
 {
-  "name": "costpilot",
+  "name": "expenseforge",
   "version": "1.0.0",
-  "description": "CostPilot - Niche-specific receipt scanner and expense tracker for Canadian market",
+  "description": "ExpenseForge - Niche-specific receipt scanner and expense tracker for Canadian market",
   "private": true,
   "workspaces": [
     "apps/*",

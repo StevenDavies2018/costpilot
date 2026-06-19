@@ -1,4 +1,4 @@
-# CostPilot OAuth Setup Guide - Web Backend
+# ExpenseForge OAuth Setup Guide - Web Backend
 
 Configure Google, Facebook, and LinkedIn OAuth for the **web backend** (Next.js on Vercel).
 
@@ -21,7 +21,7 @@ You'll need OAuth credentials from 3 providers. Each requires:
 1. Go to **Google Cloud Console**: https://console.cloud.google.com
 2. Click the **Project** dropdown at the top
 3. Click **NEW PROJECT**
-   - Name: `CostPilot`
+   - Name: `ExpenseForge`
    - Click **CREATE**
 4. Wait for the project to be created (may take a minute)
 
@@ -44,7 +44,7 @@ You'll need OAuth credentials from 3 providers. Each requires:
 1. Choose **External** (for testing)
 2. Click **CREATE**
 3. Fill in the form:
-   - **App name**: CostPilot
+   - **App name**: ExpenseForge
    - **User support email**: your-email@gmail.com
    - **Developer contact**: your-email@gmail.com
 4. Click **SAVE AND CONTINUE**
@@ -57,11 +57,11 @@ You'll need OAuth credentials from 3 providers. Each requires:
 1. Go back to **APIs & Services** → **Credentials**
 2. Click **+ CREATE CREDENTIALS** → **OAuth client ID**
 3. Choose **Web application**
-4. Name: `CostPilot Web`
+4. Name: `ExpenseForge Web`
 5. Add **Authorized redirect URIs**:
    ```
    http://localhost:3000/api/auth/callback/google
-   https://costpilot.vercel.app/api/auth/callback/google
+   https://ExpenseForge.vercel.app/api/auth/callback/google
    ```
 6. Click **CREATE**
 7. Copy the credentials:
@@ -79,7 +79,7 @@ You'll need OAuth credentials from 3 providers. Each requires:
 3. Click **+ Create App**
 4. Choose **Consumer** (for user login)
 5. Fill in details:
-   - **App Name**: CostPilot
+   - **App Name**: ExpenseForge
    - **App Contact Email**: your-email@gmail.com
    - **App Purpose**: Select `Apps for Pages`, `Apps for Websites`, or similar
 6. Click **Create App**
@@ -101,7 +101,7 @@ You'll need OAuth credentials from 3 providers. Each requires:
 5. Add **Valid OAuth Redirect URIs**:
    ```
    http://localhost:3000/api/auth/callback/facebook
-   https://costpilot.vercel.app/api/auth/callback/facebook
+   https://ExpenseForge.vercel.app/api/auth/callback/facebook
    ```
 6. Click **Save Changes**
 
@@ -114,7 +114,7 @@ You'll need OAuth credentials from 3 providers. Each requires:
 1. Go to **LinkedIn Developers**: https://www.linkedin.com/developers
 2. Click **Create app** (top right)
 3. Fill in the form:
-   - **App name**: CostPilot
+   - **App name**: ExpenseForge
    - **LinkedIn Page**: (You may need to create one first. Use your personal profile for testing)
    - **App logo**: (Optional, skip for now)
    - **Legal agreement**: Accept and create app
@@ -134,7 +134,7 @@ You'll need OAuth credentials from 3 providers. Each requires:
 3. Add both:
    ```
    http://localhost:3000/api/auth/callback/linkedin
-   https://costpilot.vercel.app/api/auth/callback/linkedin
+   https://ExpenseForge.vercel.app/api/auth/callback/linkedin
    ```
 4. Click **Update**
 
@@ -203,15 +203,15 @@ When you're ready to deploy:
 
 1. Push your code to GitHub
 2. Go to **Vercel Dashboard**: https://vercel.com/dashboard
-3. Import your `costpilot` repository
+3. Import your `ExpenseForge` repository
 4. Add environment variables:
    - `DATABASE_URL` (your Neon connection string)
    - `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`
    - `FACEBOOK_APP_ID`, `FACEBOOK_APP_SECRET`
    - `LINKEDIN_CLIENT_ID`, `LINKEDIN_CLIENT_SECRET`
    - `JWT_SECRET` (use a new secure random value)
-   - `NEXT_PUBLIC_API_URL=https://costpilot.vercel.app`
-   - `NEXT_PUBLIC_APP_URL=https://costpilot.vercel.app`
+   - `NEXT_PUBLIC_API_URL=https://ExpenseForge.vercel.app`
+   - `NEXT_PUBLIC_APP_URL=https://ExpenseForge.vercel.app`
 
 ### Update OAuth Redirect URIs
 
@@ -247,3 +247,4 @@ After you get your Vercel domain:
 5. **Deploy to Vercel**
 
 Once you have the credentials, let me know and I can help implement the OAuth callback handlers!
+

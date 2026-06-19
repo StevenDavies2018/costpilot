@@ -1,4 +1,4 @@
-# CostPilot Android OAuth Setup (Expo)
+# ExpenseForge Android OAuth Setup (Expo)
 
 Configure Google, Facebook, and LinkedIn OAuth credentials for the Android app (built with Expo).
 
@@ -20,7 +20,7 @@ Android creates a debug signing key automatically. You need its SHA-1 fingerprin
 #### Option A: Using Expo (Easiest for development)
 
 ```bash
-cd D:\CostPilot\apps\ios  # (this is your Expo app)
+cd D:\ExpenseForge\apps\ios  # (this is your Expo app)
 eas credentials
 ```
 
@@ -47,7 +47,7 @@ C:\Users\[YourUsername]\.android\debug.keystore
 For production, use EAS:
 
 ```bash
-cd D:\CostPilot\apps\ios
+cd D:\ExpenseForge\apps\ios
 eas build --platform android  # This will guide you through credential creation
 ```
 
@@ -58,7 +58,7 @@ eas build --platform android  # This will guide you through credential creation
 ### Step 1: Go to Google Cloud Console
 
 1. https://console.cloud.google.com
-2. Select your **CostPilot** project
+2. Select your **ExpenseForge** project
 3. Go to **APIs & Services** → **Credentials**
 
 ### Step 2: Create Android OAuth Credential
@@ -66,21 +66,21 @@ eas build --platform android  # This will guide you through credential creation
 1. Click **+ CREATE CREDENTIALS** → **OAuth client ID**
 2. Choose **Android**
 3. Fill in the form:
-   - **Package name**: `com.costpilot.app` (or what's in your `app.json`)
+   - **Package name**: `com.ExpenseForge.app` (or what's in your `app.json`)
    - **SHA-1 certificate fingerprint**: Paste the SHA-1 from your debug key
 4. Click **CREATE**
 5. Copy the **Client ID** → `GOOGLE_CLIENT_ID_ANDROID`
 
 ### Step 3: Verify Package Name in Expo Config
 
-Open `D:\CostPilot\apps\ios\app.json`:
+Open `D:\ExpenseForge\apps\ios\app.json`:
 
 ```json
 {
   "expo": {
-    "name": "CostPilot",
+    "name": "ExpenseForge",
     "android": {
-      "package": "com.costpilot.app"
+      "package": "com.ExpenseForge.app"
     },
     "plugins": [
       ["expo-google-sign-in", {
@@ -98,7 +98,7 @@ Open `D:\CostPilot\apps\ios\app.json`:
 ### Step 1: Go to Facebook App Dashboard
 
 1. https://developers.facebook.com → **My Apps**
-2. Select your **CostPilot** app
+2. Select your **ExpenseForge** app
 3. Go to **Settings** → **Basic**
 
 ### Step 2: Get Key Hash for Android
@@ -121,8 +121,8 @@ $keystore = "$env:USERPROFILE\.android\debug.keystore"
 1. In Facebook app settings, go to **Products** → **Facebook Login** → **Settings**
 2. Under **Android**, add:
    - **Key Hashes**: Paste your key hash from above
-   - **Package Name**: `com.costpilot.app`
-   - **Class Name**: `com.costpilot.MainActivity` (default for Expo)
+   - **Package Name**: `com.ExpenseForge.app`
+   - **Class Name**: `com.ExpenseForge.MainActivity` (default for Expo)
 
 ### Step 4: Update Expo Config
 
@@ -135,7 +135,7 @@ In `app.json`:
       ["react-native-facebook-sdk", {
         "appId": "YOUR_FACEBOOK_APP_ID",
         "clientToken": "YOUR_FACEBOOK_CLIENT_TOKEN",
-        "displayName": "CostPilot"
+        "displayName": "ExpenseForge"
       }]
     ]
   }
@@ -151,7 +151,7 @@ Get your **Client Token** from Facebook app **Settings** → **Basic**.
 ### Step 1: Go to LinkedIn Developers
 
 1. https://www.linkedin.com/developers → **My apps**
-2. Select your **CostPilot** app
+2. Select your **ExpenseForge** app
 3. Go to the **Auth** tab
 
 ### Step 2: Add Android App
@@ -160,8 +160,8 @@ Get your **Client Token** from Facebook app **Settings** → **Basic**.
 2. Click **Add mobile app**
 3. Choose **Android**
 4. Fill in:
-   - **Application name**: CostPilot
-   - **Package ID**: `com.costpilot.app`
+   - **Application name**: ExpenseForge
+   - **Package ID**: `com.ExpenseForge.app`
 5. Click **Add app**
 
 ### Step 3: Update Expo Config
@@ -184,21 +184,21 @@ In `app.json`:
 
 ## Complete app.json Configuration
 
-Update `D:\CostPilot\apps\ios\app.json`:
+Update `D:\ExpenseForge\apps\ios\app.json`:
 
 ```json
 {
   "expo": {
-    "name": "CostPilot",
-    "slug": "costpilot",
+    "name": "ExpenseForge",
+    "slug": "ExpenseForge",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "costpilot",
+    "scheme": "ExpenseForge",
     "userInterfaceStyle": "automatic",
     
     "android": {
-      "package": "com.costpilot.app",
+      "package": "com.ExpenseForge.app",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -212,7 +212,7 @@ Update `D:\CostPilot\apps\ios\app.json`:
     
     "ios": {
       "icon": "./assets/expo.icon",
-      "bundleIdentifier": "com.costpilot.app"
+      "bundleIdentifier": "com.ExpenseForge.app"
     },
     
     "plugins": [
@@ -223,7 +223,7 @@ Update `D:\CostPilot\apps\ios\app.json`:
       ["react-native-facebook-sdk", {
         "appId": "YOUR_FACEBOOK_APP_ID",
         "clientToken": "YOUR_FACEBOOK_CLIENT_TOKEN",
-        "displayName": "CostPilot"
+        "displayName": "ExpenseForge"
       }]
     ],
     
@@ -283,7 +283,7 @@ eas login
 ### 2. Run on Android Emulator
 
 ```bash
-cd D:\CostPilot\apps\ios
+cd D:\ExpenseForge\apps\ios
 expo start --android
 ```
 
@@ -343,7 +343,7 @@ eas build --platform android --profile preview
 When ready for production:
 
 ```bash
-cd D:\CostPilot\apps\ios
+cd D:\ExpenseForge\apps\ios
 eas build --platform android
 # Follow the prompts to create a release signing key
 eas submit --platform android
@@ -360,3 +360,4 @@ Once you build with EAS, update your OAuth credentials with the **production sig
 - **Google Sign-In**: https://docs.expo.dev/build-reference/google-sign-in/
 - **Facebook SDK**: https://docs.expo.dev/build-reference/facebook-sdk/
 - **EAS Build**: https://docs.expo.dev/build/introduction/
+

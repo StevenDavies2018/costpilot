@@ -1,16 +1,18 @@
 {
   "expo": {
-    "name": "CostPilot",
-    "slug": "costpilot",
+    "name": "ExpenseForge",
+    "slug": "expenseforge",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "costpilot",
+    "scheme": "expenseforge",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
     },
     "android": {
+      "package": "com.expenseforge.app",
+      "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -39,6 +41,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5786a001-e52c-467d-bc28-06de3d5a87f2"
+      }
     }
   }
 }

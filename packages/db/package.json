@@ -1,7 +1,7 @@
 {
-  "name": "@costpilot/db",
+  "name": "@expenseforge/db",
   "version": "1.0.0",
-  "description": "CostPilot database schema and migrations",
+  "description": "ExpenseForge database schema and migrations",
   "private": true,
   "scripts": {
     "migrate": "node migrate.js"

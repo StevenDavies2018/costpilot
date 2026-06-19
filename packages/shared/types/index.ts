@@ -1,4 +1,4 @@
-// Shared types for CostPilot iOS and Web apps
+// Shared types for ExpenseForge iOS and Web apps
 
 export type UserNiche = 'contractor' | 'real_estate_agent' | 'other';
 export type OAuthProvider = 'google' | 'facebook' | 'linkedin';
@@ -125,3 +125,4 @@ export function getCategoriesByNiche(niche: UserNiche): string[] {
       return OTHER_CATEGORIES;
   }
 }
+
